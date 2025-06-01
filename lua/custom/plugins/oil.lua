@@ -13,6 +13,9 @@ return {
         'size',
         'mtime',
       },
+      keymaps = {
+        ['<C-h>'] = false,
+      },
     }
 
     vim.keymap.set('n', '<leader>e', '<CMD>Oil --float .<CR>', { desc = 'Open File Explorer (Oil)' })
