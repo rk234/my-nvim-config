@@ -13,17 +13,19 @@ return {
   keys = {
     { '<leader>e', ':Neotree toggle<CR>', desc = 'NeoTree reveal', silent = true },
   },
-  opts = {
-    filesystem = {
-      hijack_netrw_behavior = 'open_current',
-      window = {
-        mappings = {
-          ['\\'] = 'close_window',
+  config = function()
+    require('neo-tree').setup {
+      close_if_last_window = true,
+      filesystem = {
+        hijack_netrw_behavior = 'open_current',
+        window = {
+          mappings = {
+            ['\\'] = 'close_window',
+          },
         },
       },
-    },
-  },
-  config = function()
+    }
+
     if vim.bo.filetype == 'netrw' and vim.b.netrw_method == nil then
       vim.defer_fn(function()
         vim.cmd('enew | Neotree current dir=' .. vim.b.netrw_curdir)
