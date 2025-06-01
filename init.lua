@@ -212,6 +212,9 @@ vim.keymap.set('n', '<BS>', '<C-^>', { desc = 'Go to previous buffer' })
 vim.keymap.set('n', '<leader>|', ':vsplit<CR>', { desc = 'Vertical split' })
 vim.keymap.set('n', '<leader>/', ':split<CR>', { desc = 'Horizontal split' })
 
+vim.keymap.set('i', 'jj', '<ESC>', { desc = 'Enter normal mode', nowait = true })
+vim.keymap.set('i', 'kk', '<ESC>', { desc = 'Enter normal mode', nowait = true })
+
 -- [[ Basic Autocommands ]]
 --  See `:help lua-guide-autocommands`
 
@@ -226,7 +229,7 @@ vim.api.nvim_create_autocmd('TextYankPost', {
   end,
 })
 
-vim.api.nvim_create_autocmd({ 'BufEnter', 'BufWinEnter', 'BufRead', 'BufWritePre', '' }, {
+vim.api.nvim_create_autocmd({ 'BufEnter', 'BufWinEnter', 'BufRead', 'BufWritePre' }, {
   callback = function(args)
     require('guess-indent').guess_from_buffer(args.buf)
   end,
