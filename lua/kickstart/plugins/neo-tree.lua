@@ -1,6 +1,6 @@
 -- Neo-tree is a Neovim plugin to browse the file system
 -- https://github.com/nvim-neo-tree/neo-tree.nvim
-
+---@type LazySpec
 return {
   'nvim-neo-tree/neo-tree.nvim',
   version = '*',
@@ -15,6 +15,7 @@ return {
   },
   opts = {
     filesystem = {
+      hijack_netrw_behavior = 'open_current',
       window = {
         mappings = {
           ['\\'] = 'close_window',
@@ -22,4 +23,11 @@ return {
       },
     },
   },
+  config = function()
+    if vim.bo.filetype == 'netrw' and vim.b.netrw_method == nil then
+      vim.defer_fn(function()
+        vim.cmd('enew | Neotree current dir=' .. vim.b.netrw_curdir)
+      end, 0)
+    end
+  end,
 }
