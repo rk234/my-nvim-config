@@ -6,8 +6,7 @@ return {
       padding = true,
     }
 
-    vim.keymap.set('n', '<leader>/', 'gc')
-    vim.keymap.set('x', '<leader>/', 'gcc')
-    vim.keymap.set('v', '<leader>/', 'gbc')
+    vim.keymap.set('n', '<leader>/', 'gcc', { remap = true, desc = 'Toggle comment line' })
+    vim.keymap.set('x', '<leader>/', 'gc', { remap = true, desc = 'Toggle comment' })
   end,
 }
