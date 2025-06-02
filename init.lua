@@ -126,8 +126,8 @@ vim.keymap.set('n', '<BS>', '<C-^>', { desc = 'Go to previous buffer' })
 vim.keymap.set('n', '<leader>|', ':vsplit<CR>', { desc = 'Vertical split' })
 vim.keymap.set('n', '<leader>\\', ':split<CR>', { desc = 'Horizontal split' })
 
-vim.keymap.set('i', 'jj', '<ESC>', { desc = 'Enter normal mode', nowait = true })
-vim.keymap.set('i', 'kk', '<ESC>', { desc = 'Enter normal mode', nowait = true })
+-- vim.keymap.set('i', 'jj', '<ESC>', { desc = 'Enter normal mode', nowait = true })
+-- vim.keymap.set('i', 'kk', '<ESC>', { desc = 'Enter normal mode', nowait = true })
 
 -- [[ Basic Autocommands ]]
 --  See `:help lua-guide-autocommands`
