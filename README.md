@@ -1,4 +1,4 @@
-## Neovim Config based off of Kickstart
+## Neovim config based off of Kickstart
 
 ## Installation
 
