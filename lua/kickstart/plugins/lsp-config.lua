@@ -1,4 +1,4 @@
----@type LazySpec
+--
 return {
   -- Main LSP Configuration
   'neovim/nvim-lspconfig',
@@ -316,5 +316,6 @@ return {
       server.capabilities = vim.tbl_deep_extend('force', {}, capabilities, server.capabilities or {})
       vim.lsp.config(server_name, server)
     end
+    vim.lsp.enable 'racket_langserver'
   end,
 }
