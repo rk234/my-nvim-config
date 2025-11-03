@@ -225,26 +225,26 @@ return {
         },
       },
 
-      vtsls = {
-        filetypes = {
-          'javascript',
-          'javascriptreact',
-          'javascript.jsx',
-          'typescript',
-          'typescriptreact',
-          'typescript.tsx',
-          'vue',
-        },
-        settings = {
-          vtsls = {
-            tsserver = {
-              globalPlugins = {
-                vue_plugin_config,
-              },
-            },
-          },
-        },
-      },
+      -- vtsls = {
+      --   filetypes = {
+      --     'javascript',
+      --     'javascriptreact',
+      --     'javascript.jsx',
+      --     'typescript',
+      --     'typescriptreact',
+      --     'typescript.tsx',
+      --     'vue',
+      --   },
+      --   settings = {
+      --     vtsls = {
+      --       tsserver = {
+      --         globalPlugins = {
+      --           vue_plugin_config,
+      --         },
+      --       },
+      --     },
+      --   },
+      -- },
 
       lua_ls = {
         -- cmd = { ... },
@@ -296,7 +296,8 @@ return {
       'rust-analyzer',
       'basedpyright',
       'tailwindcss-language-server',
-      'vtsls',
+      -- 'vtsls',
+      -- 'ts_ls',
       'vue_ls',
     })
     require('mason-tool-installer').setup { ensure_installed = ensure_installed }
