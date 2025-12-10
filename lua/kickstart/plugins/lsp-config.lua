@@ -299,6 +299,7 @@ return {
       -- 'vtsls',
       -- 'ts_ls',
       'vue_ls',
+      'tinymist',
     })
     require('mason-tool-installer').setup { ensure_installed = ensure_installed }
 
