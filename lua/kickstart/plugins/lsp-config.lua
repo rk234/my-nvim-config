@@ -291,6 +291,7 @@ return {
       'css-lsp',
       'gopls',
       'eslint-lsp',
+      'oxlint',
       'html-lsp',
       'ocaml-lsp',
       'rust-analyzer',
