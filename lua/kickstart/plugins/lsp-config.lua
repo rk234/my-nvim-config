@@ -217,6 +217,14 @@ return {
       -- ts_ls = {},
       --
       --
+      astro = {
+        init_options = {
+          typescript = {
+            tsdk = vim.fn.expand '$MASON' .. '/packages/astro-language-server/node_modules/typescript/lib',
+          },
+        },
+      },
+
       vue_ls = {
         init_options = {
           vue = {
@@ -301,6 +309,7 @@ return {
       -- 'ts_ls',
       'vue_ls',
       'tinymist',
+      'astro-language-server',
     })
     require('mason-tool-installer').setup { ensure_installed = ensure_installed }
 
