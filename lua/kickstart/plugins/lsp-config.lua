@@ -210,11 +210,7 @@ return {
       -- rust_analyzer = {},
       -- ... etc. See `:help lspconfig-all` for a list of all the pre-configured LSPs
       --
-      -- ts_ls = {},
-      --
-      -- tsgo is the new native (Go-ported) TypeScript language server:
-      --    https://github.com/microsoft/typescript-go
-      tsgo = {},
+      tsc = {},
       --
       astro = {
         init_options = {
@@ -306,7 +302,7 @@ return {
       'tailwindcss-language-server',
       -- 'vtsls',
       -- 'ts_ls',
-      'tsgo',
+      'tsc',
       'vue_ls',
       'tinymist',
       'astro-language-server',
